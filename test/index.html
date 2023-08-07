@@ -16,12 +16,19 @@
 
 <body>
     <div id="test">test page </div>
+    <div id="test2">test page loading。。。</div>
+
     <script>
         window.onload = function () {
             console.log("load end")
             const userAgent = navigator.userAgent;
             console.log("User Agent:", userAgent);
             document.querySelector('#test').innerHTML = userAgent
+            document.querySelector('#test2').style.display = "none";
+            if (userAgent.indexOf("QBWebViewTyp") != -1) {
+                document.querySelector('#test2').style.display = "block";
+                document.querySelector('#test2').innerHTML = "点击上方按钮，前往本地浏览器打开"
+            }
         }
 
     </script>
