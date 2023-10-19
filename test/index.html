@@ -17,7 +17,27 @@
 <body>
     <div id="test">test page </div>
     <div id="test2">test page loading。。。</div>
+    <div>
+        <br/>
+        美团优选总结 <br/>
+        好<br/>
+        1. 火龙果，便宜好吃，基本2元一斤，没遇到踩雷的，很甜，一斤2个。<br/>
+        2. 菠萝蜜，便宜好吃<br/>
+        3. 各种酸奶，洗手液，比市面上便宜一点<br/>
+        4. 蓝莓，买小于5元的才好吃，贵的都是智商税，因为全部都是一个味道！！！！<br/>
+        <br/><br/>
+        看运气<br/>
+        1. 🍊桔，随便买的肯定不行，要买单果大于xx的才能吃。<br/>
+        2. 🍑桃，不会特难吃，就是贵<br/>
 
+        <br/><br/>
+        坏<br/>
+        1. 香蕉🍌❎ 根本不熟！！买了无数次，全部不行，基本都丢了<br/>
+        2. 甜瓜，哈密瓜，西瓜，又难吃又小<br/>
+        3. 猕猴桃，全部不行，都丢了<br/>
+        4. 桔/橙子，基本全部不行，又小又酸，笑鼠<br/>
+
+    </div>
     <script>
         window.onload = function () {
             console.log("load end")
@@ -25,7 +45,7 @@
             console.log("User Agent:", userAgent);
             document.querySelector('#test').innerHTML = userAgent
             document.querySelector('#test2').style.display = "none";
-            if (userAgent.indexOf("QBWebViewTyp") != -1) {
+            if (userAgent.indexOf("QBWebViewType") != -1 && userAgent.indexOf("Android") == -1) {
                 document.querySelector('#test2').style.display = "block";
                 document.querySelector('#test2').innerHTML = "点击上方按钮，前往本地浏览器打开"
             }
